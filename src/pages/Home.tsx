@@ -2,7 +2,7 @@ import { PageContainer } from '@ant-design/pro-components';
 import { Alert, Card, Typography } from 'antd';
 import React from 'react';
 import { FormattedMessage, useIntl } from 'umi';
-import styles from './Welcome.less';
+import styles from './Home.less';
 
 const CodePreview: React.FC = ({ children }) => (
   <pre className={styles.pre}>
@@ -12,7 +12,7 @@ const CodePreview: React.FC = ({ children }) => (
   </pre>
 );
 
-const Welcome: React.FC = () => {
+const Home: React.FC = () => {
   const intl = useIntl();
 
   return (
@@ -20,7 +20,7 @@ const Welcome: React.FC = () => {
       <Card>
         <Alert
           message={intl.formatMessage({
-            id: 'pages.welcome.alertMessage',
+            id: 'pages.home.alertMessage',
             defaultMessage: 'Faster and stronger heavy-duty components have been released.',
           })}
           type="success"
@@ -37,7 +37,7 @@ const Welcome: React.FC = () => {
             rel="noopener noreferrer"
             target="__blank"
           >
-            <FormattedMessage id="pages.welcome.link" defaultMessage="Welcome" />
+            <FormattedMessage id="pages.home.link" defaultMessage="Home" />
           </a>
         </Typography.Text>
         <CodePreview>yarn add @ant-design/pro-components</CodePreview>
@@ -46,4 +46,4 @@ const Welcome: React.FC = () => {
   );
 };
 
-export default Welcome;
+export default Home;

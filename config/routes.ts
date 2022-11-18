@@ -14,10 +14,10 @@
     ],
   },
   {
-    path: '/welcome',
-    name: 'welcome',
+    path: '/home',
+    name: 'home',
     icon: 'smile',
-    component: './Welcome',
+    component: './Home',
   },
   {
     path: '/admin',
@@ -29,7 +29,7 @@
         path: '/admin/sub-page',
         name: 'sub-page',
         icon: 'smile',
-        component: './Welcome',
+        component: './Home',
       },
       {
         component: './404',
@@ -44,7 +44,7 @@
   },
   {
     path: '/',
-    redirect: '/welcome',
+    redirect: '/home',
   },
   {
     component: './404',
