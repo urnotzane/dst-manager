@@ -1,16 +1,15 @@
 import React from 'react';
 import { Card } from 'antd';
+import { LoginForm } from '../LoginForm';
 
 export const LoginCard: React.FC = () => (
   <>
     <Card
-      title="Default size card"
-      extra={<a href="#">More</a>}
-      style={{ width: 300 }}
+      title="登录"
+      className="w-[400px] m-auto"
+      headStyle={{ textAlign: 'center' }}
     >
-      <p>Card content</p>
-      <p>Card content</p>
-      <p>Card content</p>
+      <LoginForm />
     </Card>
   </>
 );
