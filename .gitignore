@@ -12,6 +12,7 @@
 
 # misc
 .DS_Store
+v8-compile-cache*
 
 # umi
 /src/.umi
