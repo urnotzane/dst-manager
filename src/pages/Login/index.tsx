@@ -4,7 +4,7 @@ import { LoginCard } from './components/LoginCard';
 
 export default function Page() {
   return (
-    <div className={styles.login}>
+    <div className="w-full h-full flex justify-center">
       <LoginCard />
     </div>
   );

@@ -1,13 +1,19 @@
 import { defineConfig } from 'umi';
+import tailwindcss from 'tailwindcss';
 
 export default defineConfig({
-  nodeModulesTransform: {
-    type: 'none',
-  },
   routes: [
     { path: '/', component: '@/pages/Home/index' },
     { path: '/login', component: '@/pages/Login/index' },
   ],
-  fastRefresh: {},
-  locale: { antd: true },
+
+  fastRefresh: true,
+  extraPostCSSPlugins: [
+    tailwindcss({
+      config: './tailwind.config.js',
+    }),
+  ],
+
+  tailwindcss: {},
+  plugins: ['@umijs/plugins/dist/tailwindcss'],
 });
