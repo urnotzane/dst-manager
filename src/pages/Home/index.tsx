@@ -1,16 +1,15 @@
-import { Layout } from 'antd';
+import { MdstLayout } from '@/components/MdstLayout';
 import React from 'react';
-import styles from './index.less';
-
-const { Header, Content } = Layout;
+import { Outlet, useRouteData } from 'umi';
 
 export default function Page() {
+  const { route } = useRouteData();
   return (
     <>
-      <Layout>
-        <Header>11</Header>
-        <Content>22</Content>
-      </Layout>
+      <MdstLayout>
+        {route.path === '/' ? '' : <Outlet />}
+        index
+      </MdstLayout>
     </>
   );
 }

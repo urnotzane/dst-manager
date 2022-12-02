@@ -4,8 +4,20 @@ import tailwindcss from 'tailwindcss';
 export default defineConfig({
   title: 'MDST',
   routes: [
-    { path: '/', component: '@/pages/Home/index' },
-    { path: '/login', component: '@/pages/Login/index' },
+    {
+      path: '/login',
+      component: '@/pages/Login/index',
+    },
+    {
+      path: '/',
+      component: '@/pages/Home/index',
+      routes: [
+        // {
+        //   path: '/ds',
+        //   component: '@/pages/Home/index',
+        // }
+      ],
+    },
   ],
 
   fastRefresh: true,
