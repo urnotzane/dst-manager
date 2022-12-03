@@ -13,3 +13,7 @@ Start the dev server,
 ```bash
 $ yarn start
 ```
+
+## Routes
+- home server list
+- server:id 

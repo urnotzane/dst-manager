@@ -12,10 +12,20 @@ export default defineConfig({
       path: '/',
       component: '@/pages/Home/index',
       routes: [
-        // {
-        //   path: '/ds',
-        //   component: '@/pages/Home/index',
-        // }
+        {
+          path: '/server/:id',
+          component: '@/pages/About/index',
+          meta: {
+            name: '控制面板',
+          },
+        },
+        {
+          path: '/server/:id/world',
+          component: '@/pages/About/index',
+          meta: {
+            name: '世界管理',
+          },
+        },
       ],
     },
   ],
